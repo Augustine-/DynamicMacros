@@ -20,7 +20,7 @@ dynamicMacros:SetScript("OnEvent", updatePlayerNamesInMacros);
 
 function dynamicMacroUpdate()
     --trigger only if 2 or 3 players are in party (2v2 / 3v3 situations)
-    if not InCombatLockdown() and ((GetNumGroupMembers() == 2) or (GetNumGroupMembers() == 3)) then
+    if ((GetNumGroupMembers() == 2) or (GetNumGroupMembers() == 3)) then
         nonExistentmacroNameArray = {}
         -- loop to parse every macro user defined 
         for key, value in pairs(macroNameArray) do
